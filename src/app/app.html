@@ -1,0 +1,70 @@
+<div class="app-container" [class.loading]="isLoading()">
+  <!-- Global Loading Splash -->
+  <div class="splash-screen" *ngIf="isLoading()">
+    <div class="splash-content">
+      <img src="/ZYRENZA%20STPL%20logo%201000x1000px%20.jpeg" alt="Zyrenza Initializing" class="splash-logo-img">
+      <div class="splash-loader">
+        <div class="loader-bar"></div>
+      </div>
+      <p>INITIALIZING W3X ECOSYSTEM...</p>
+    </div>
+  </div>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress" [style.width.%]="scrollProgress()"></div>
+
+  <!-- Multi-Layer Particle Background -->
+  <div class="particles-container">
+    <div class="particle-layer back">
+      @for (p of [1,2,3,4,5,6,7,8,9,10]; track $index) {
+        <div class="particle p-slow" [style.left.%]="p * 10" [style.top.%]="(p * 13) % 100"></div>
+      }
+    </div>
+    <div class="particle-layer mid">
+      @for (p of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]; track $index) {
+        <div class="particle p-mid" [style.left.%]="(p * 7) % 100" [style.top.%]="(p * 9) % 100"></div>
+      }
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-content">
+      <div class="logo" (click)="scrollToSection('home')" style="cursor: pointer;">
+        <img src="/ZYRENZA%20STPL%20logo%201000x1000px%20.jpeg" alt="Zyrenza" class="brand-logo-full">
+        <div class="logo-text-group">
+          <span class="logo-text">ZYRENZA</span>
+          <span class="logo-subtext">SUSTAINABLE TECH</span>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a (click)="scrollToSection('home')" style="cursor: pointer;">Home</a>
+        <a (click)="scrollToSection('about')" style="cursor: pointer;">About Us</a>
+        <a (click)="scrollToSection('technology')" style="cursor: pointer;">Tech Core</a>
+        <a (click)="scrollToSection('contact')" style="cursor: pointer;">Contact</a>
+        <button class="btn-primary" (click)="scrollToSection('contact')">Partner With Us</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Router Outlet for Home and About -->
+  <main>
+    <router-outlet />
+  </main>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-info">
+        <img src="/ZYRENZA%20STPL%20logo%201000x1000px%20.jpeg" alt="Zyrenza Brand" class="footer-logo-img">
+        <p>Zyrenza Sustainable Technologies Private Limited</p>
+      </div>
+      <div class="socials">
+        <a href="https://www.linkedin.com/public-profile/settings/" target="_blank">LinkedIn</a>
+        <a href="#">Twitter</a>
+        <a href="mailto:zyrenzastechpvtd26@gmail.com">Contact Us</a>
+      </div>
+    </div>
+  </footer>
+</div>
