@@ -87,7 +87,8 @@
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;
-  padding: 6rem 4rem 0; /* Increased padding for better breathing room */
+  padding: 6rem 4rem 0;
+  /* Increased padding for better breathing room */
   display: flex;
   align-items: center;
 }
@@ -137,7 +138,8 @@
   align-items: center;
   gap: 2rem;
   margin-bottom: 3.5rem;
-  padding-left: 0.5rem; /* Optical alignment fix */
+  padding-left: 0.5rem;
+  /* Optical alignment fix */
 }
 
 .icon-circle {
@@ -219,12 +221,22 @@
 
 
 @keyframes fade-in-up {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media screen and (max-width: 1024px) {
-  .hero-headline-bold { font-size: 3rem; }
+  .hero-headline-bold {
+    font-size: 3rem;
+  }
+
   .hero-overlay-gradient {
     background: linear-gradient(0deg, rgba(3, 0, 20, 0.95) 30%, transparent 100%);
   }
@@ -311,13 +323,30 @@
   animation: stat-load 2s forwards ease-out;
 }
 
-.stat-progress.green::after { background: var(--primary); width: 90%; }
-.stat-progress.yellow::after { background: #facc15; width: 75%; }
-.stat-progress.emerald::after { background: #10b981; width: 60%; }
-.stat-progress.blue::after { background: #06b6d4; width: 85%; }
+.stat-progress.green::after {
+  background: var(--primary);
+  width: 90%;
+}
+
+.stat-progress.yellow::after {
+  background: #facc15;
+  width: 75%;
+}
+
+.stat-progress.emerald::after {
+  background: #10b981;
+  width: 60%;
+}
+
+.stat-progress.blue::after {
+  background: #06b6d4;
+  width: 85%;
+}
 
 @keyframes stat-load {
-  from { width: 0; }
+  from {
+    width: 0;
+  }
 }
 
 /* Sections Global */
@@ -347,7 +376,7 @@ section {
   background: #fff;
   border-radius: 24px;
   padding: 3rem;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.02);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.02);
   border: 1px solid rgba(106, 158, 47, 0.05);
   transition: transform 0.3s ease;
 }
@@ -405,8 +434,13 @@ section {
   gap: 2rem;
 }
 
-.mission-card { border-left: 5px solid #6A9E2F; }
-.vision-card { border-left: 5px solid #A7C957; }
+.mission-card {
+  border-left: 5px solid #6A9E2F;
+}
+
+.vision-card {
+  border-left: 5px solid #A7C957;
+}
 
 .section-header {
   text-align: center;
@@ -439,7 +473,8 @@ section {
   border: 1px solid var(--glass-border);
 }
 
-.trash-side, .fuel-side {
+.trash-side,
+.fuel-side {
   display: flex;
   gap: 1.5rem;
 }
@@ -476,13 +511,25 @@ section {
 }
 
 @keyframes flow-stream {
-  100% { left: 100%; }
+  100% {
+    left: 100%;
+  }
 }
 
 @keyframes jitter {
-  0%, 100% { transform: translate(0, 0); }
-  25% { transform: translate(-2px, 2px); }
-  75% { transform: translate(2px, -2px); }
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(-2px, 2px);
+  }
+
+  75% {
+    transform: translate(2px, -2px);
+  }
 }
 
 /* Problem Cards */
@@ -677,11 +724,13 @@ section {
   position: relative;
 }
 
-.flow-input, .flow-core {
+.flow-input,
+.flow-core {
   text-align: center;
 }
 
-.flow-input .icon, .flow-core .core-icon {
+.flow-input .icon,
+.flow-core .core-icon {
   font-size: 3.5rem;
   margin-bottom: 1rem;
   display: block;
@@ -699,7 +748,9 @@ section {
 }
 
 @keyframes dash-flow {
-  to { stroke-dashoffset: 0; }
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 .flow-outputs {
@@ -725,7 +776,9 @@ section {
   background: rgba(34, 197, 94, 0.1);
 }
 
-.revenue-item .currency { font-size: 1.5rem; }
+.revenue-item .currency {
+  font-size: 1.5rem;
+}
 
 /* Market Grid */
 .market-grid {
@@ -819,10 +872,33 @@ section {
 }
 
 @media screen and (max-width: 768px) {
-  .flow-diagram { flex-direction: column; gap: 3rem; }
-  .flow-arrow-svg { display: none; }
-  .roadmap-track { flex-direction: column; gap: 3rem; align-items: flex-start; }
-  .roadmap-track::after { display: none; }
-  .roadmap-milestone { text-align: left; display: flex; align-items: center; gap: 2rem; }
-  .milestone-year { margin: 0; }
+  .flow-diagram {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .flow-arrow-svg {
+    display: none;
+  }
+
+  .roadmap-track {
+    flex-direction: column;
+    gap: 3rem;
+    align-items: flex-start;
+  }
+
+  .roadmap-track::after {
+    display: none;
+  }
+
+  .roadmap-milestone {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .milestone-year {
+    margin: 0;
+  }
 }
